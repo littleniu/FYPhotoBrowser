@@ -1,6 +1,6 @@
 # FYPhotoBrowser
 
-用法很简答的：
+用法很简单的：
 
            FYImageView * im =[[FYImageView alloc]initWithFrame:CGRectMake((130 * (i % 3) )+ 30, 10 + 120 * (i / 3), 100, 80)];
 
