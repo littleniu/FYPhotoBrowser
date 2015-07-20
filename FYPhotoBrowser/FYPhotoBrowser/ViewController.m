@@ -74,6 +74,7 @@
     NSInteger index = tap.view.tag ;
     UITableViewCell *cell = [table cellForRowAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
     FYPhotoBrowser * photoWeb = [[FYPhotoBrowser alloc]initWithImageUrlString:dataArray atIndex:index FromView:cell.contentView];
+    photoWeb.isFromNet = YES ;
     [photoWeb showWithView:tap.view];
     
 }

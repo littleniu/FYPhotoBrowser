@@ -20,8 +20,12 @@
 
 @interface FYPhotoBrowser : UIView <UIScrollViewDelegate>
 
-@property (nonatomic,strong) NSArray * array;
+@property (nonatomic,strong) NSArray * imagesUrlArray;
 @property (nonatomic,assign) NSInteger index;
+//默认图
+@property (nonatomic,strong) NSArray * imagesArray;
+
+@property (nonatomic,assign) BOOL isFromNet;
 
 //字符串imageUrl数组  index是点击的第几个 从0开始
 -(instancetype)initWithImageUrlString:(NSArray *)urlArray atIndex:(NSInteger)index FromView:(UIView *)fromView;

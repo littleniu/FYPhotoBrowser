@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>52D29BF4-9349-4951-9CCC-0172CAAE9DF2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FYPhotoBrowser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6894545D80A75B0EC2E098B9F93F61F59D0A26EF</key>
+		<string>https://github.com/littleniu/FYPhotoBrowser.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FYPhotoBrowser/FYPhotoBrowser.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6894545D80A75B0EC2E098B9F93F61F59D0A26EF</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/littleniu/FYPhotoBrowser.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6894545D80A75B0EC2E098B9F93F61F59D0A26EF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6894545D80A75B0EC2E098B9F93F61F59D0A26EF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FYPhotoBrowser</string>
+		</dict>
+	</array>
+</dict>
+</plist>
