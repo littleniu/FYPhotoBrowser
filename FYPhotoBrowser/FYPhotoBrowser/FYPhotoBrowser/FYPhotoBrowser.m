@@ -57,7 +57,7 @@
     }
     _scrollView.contentSize = CGSizeMake(kScreenWidth * imagesCount, kScreenHeight);
     for (int i = 0; i < imagesCount; i ++) {
-        UIImageView * imageV= [[UIImageView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, kScreenHeight)];
+        UIImageView * imageV= [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
         UIImage * defaultImage = nil; //默认图
         if (i == self.index) {
             defaultImage = _currentView.image ;
@@ -92,9 +92,6 @@
         [imageV addGestureRecognizer:pin];
         
         UIScrollView * scroll=[[UIScrollView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, kScreenHeight)];
-        scroll.minimumZoomScale = 0.5f;
-        scroll.maximumZoomScale = 2.0f;
-        scroll.delegate = self ;
         [scroll addSubview:imageV];
         [_scrollView addSubview:imageV];
     }
