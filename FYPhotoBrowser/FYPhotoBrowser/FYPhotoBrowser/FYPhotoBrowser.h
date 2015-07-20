@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SDWebImageManager.h"
 #import "UIImageView+WebCache.h"
+#import "FYPhoto.h"
 
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width

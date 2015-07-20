@@ -52,10 +52,14 @@
         if (i == self.index) {
             defaultImage = _currentView.image ;
         }
+        MBProgressHUD * hud = [[MBProgressHUD alloc]init];
+        hud.mode = MBProgressHUDModeAnnularDeterminate ;
+        [imageV addSubview:hud];
+        [hud show:YES];
         [imageV sd_setImageWithURL:[NSURL URLWithString:_array[i]] placeholderImage:nil options:SDWebImageProgressiveDownload progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-            
+            hud.progress = (CGFloat)receivedSize/(CGFloat)expectedSize;
         } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            
+            [hud hide:YES];
         }];
         imageV.contentMode =  UIViewContentModeScaleAspectFit ;
         imageV.tag = i ;
