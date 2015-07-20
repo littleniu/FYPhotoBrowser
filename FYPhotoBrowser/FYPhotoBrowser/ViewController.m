@@ -21,7 +21,7 @@
 
 -(void)btnClick:(UIButton * )sender
 {
-   
+   //http://img5.imgtn.bdimg.com/it/u=1604509887,3331516596&fm=21&gp=0.jpg
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,11 +30,11 @@
     [self.view addSubview:table];
     table.delegate = self ;
     table.dataSource = self ;
-    dataArray = @[@"http://ww2.sinaimg.cn/thumbnail/904c2a35jw1emu3ec7kf8j20c10epjsn.jpg",
-                    @"http://ww2.sinaimg.cn/thumbnail/98719e4agw1e5j49zmf21j20c80c8mxi.jpg",
-                    @"http://ww2.sinaimg.cn/thumbnail/67307b53jw1epqq3bmwr6j20c80axmy5.jpg",
+    dataArray = @[@"http://pic46.nipic.com/20140825/2531170_154743881000_2.jpg",
+                    @"http://img3.3lian.com/2006/027/04/050.jpg",
+                    @"http://cdn.duitang.com/uploads/item/201409/01/20140901084048_RJWPs.thumb.224_0.jpeg",
                     @"http://ww2.sinaimg.cn/thumbnail/9ecab84ejw1emgd5nd6eaj20c80c8q4a.jpg",
-                    @"http://ww2.sinaimg.cn/thumbnail/642beb18gw1ep3629gfm0g206o050b2a.gif",
+                    @"http://photo.l99.com/bigger/21/1359554344075_z6qfc5.jpg",
                     @"http://ww4.sinaimg.cn/thumbnail/9e9cb0c9jw1ep7nlyu8waj20c80kptae.jpg"];
     
 }
@@ -57,7 +57,10 @@
         FYImageView * im =[[FYImageView alloc]initWithFrame:CGRectMake((130 * (i % 3) )+ 30, 10 + 120 * (i / 3), 100, 80)];
         [im addTarget:self action:@selector(cellClick:)];
          im.contentMode = UIViewContentModeScaleAspectFit ;
-        [im  sd_setImageWithURL:[NSURL URLWithString:dataArray[i]] placeholderImage:nil];
+        [im  sd_setImageWithURL:[NSURL URLWithString:dataArray[i]] placeholderImage:nil options:SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+           
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        }];
         im.tag = i ;
         [cell.contentView addSubview:im];
         
