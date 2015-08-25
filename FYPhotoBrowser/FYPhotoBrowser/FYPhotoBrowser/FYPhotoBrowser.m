@@ -85,6 +85,7 @@
         imageV.contentMode =  UIViewContentModeScaleAspectFit ;
         imageV.tag = i ;
         imageV.userInteractionEnabled = YES ;
+        imageV.backgroundColor =[UIColor blackColor];
         UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hide:)];
         [imageV addGestureRecognizer:tap];
         
