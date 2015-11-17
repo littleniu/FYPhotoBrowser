@@ -30,12 +30,12 @@
     [self.view addSubview:table];
     table.delegate = self ;
     table.dataSource = self ;
-    dataArray = @[@"http://pic46.nipic.com/20140825/2531170_154743881000_2.jpg",
-                    @"http://img3.3lian.com/2006/027/04/050.jpg",
-                    @"http://cdn.duitang.com/uploads/item/201409/01/20140901084048_RJWPs.thumb.224_0.jpeg",
-                    @"http://ww2.sinaimg.cn/thumbnail/9ecab84ejw1emgd5nd6eaj20c80c8q4a.jpg",
-                    @"http://photo.l99.com/bigger/21/1359554344075_z6qfc5.jpg",
-                    @"http://ww4.sinaimg.cn/thumbnail/9e9cb0c9jw1ep7nlyu8waj20c80kptae.jpg"];
+    dataArray = @[@"http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg",
+                    @"http://pic14.nipic.com/20110522/7411759_164157418126_2.jpg",
+                    @"http://img2.3lian.com/img2007/19/33/005.jpg",
+                    @"http://img.taopic.com/uploads/allimg/130501/240451-13050106450911.jpg",
+                    @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg",
+                    @"http://pica.nipic.com/2008-03-19/2008319183523380_2.jpg"];
     
 }
 

@@ -18,6 +18,24 @@
 #define kkeyWindow [UIApplication sharedApplication].keyWindow
 
 
+@protocol FYPhotoBrowserDelegate <NSObject>
+
+@optional
+/**
+ *  滚动到第几张图
+ *
+ *  @param index 图的索引
+ */
+-(void)scrollToPhotoIndex:(NSNumber*)index ;
+/**
+ *  点击了第几张图
+ *
+ *  @param index 图的索引
+ */
+-(void)clickPhotoIndex:(NSNumber *)index;
+
+@end
+
 @interface FYPhotoBrowser : UIView <UIScrollViewDelegate>
 
 @property (nonatomic,strong) NSArray * imagesUrlArray;
@@ -26,6 +44,7 @@
 @property (nonatomic,strong) NSArray * imagesArray;
 
 @property (nonatomic,assign) BOOL isFromNet;
+@property (nonatomic,weak) id<FYPhotoBrowserDelegate> delegate;
 
 //字符串imageUrl数组  index是点击的第几个 从0开始
 -(instancetype)initWithImageUrlString:(NSArray *)urlArray atIndex:(NSInteger)index FromView:(UIView *)fromView;

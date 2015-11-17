@@ -94,7 +94,7 @@
         
         UIScrollView * scroll=[[UIScrollView alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, kScreenHeight)];
         [scroll addSubview:imageV];
-        [_scrollView addSubview:imageV];
+        [_scrollView addSubview:scroll];
     }
     _pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, kScreenHeight - 20, kScreenWidth, 20)];
     _pageControl.numberOfPages = imagesCount ;
@@ -136,6 +136,9 @@
     NSInteger currentePage = scrollView.contentOffset.x/kScreenWidth;
     _pageControl.currentPage = currentePage ;
     currentIndex = currentePage ;
+    if ([self.delegate respondsToSelector:@selector(scrollToPhotoIndex:)]) {
+        [self.delegate performSelector:@selector(scrollToPhotoIndex:) withObject:@(currentIndex)];
+    }
     [self setDefaultSize];
 }
 -(void)setDefaultSize{
@@ -156,7 +159,9 @@
     
     NSInteger index = _pageControl.currentPage ;
     NSLog(@"现在是点击的%ld图片",(long)index);
-    
+    if ([self.delegate respondsToSelector:@selector(clickPhotoIndex:)]) {
+        [self.delegate performSelector:@selector(clickPhotoIndex:) withObject:@(tap.view.tag)];
+    }
     UIView * currentImageView;
     for (int i = 0; i < _currentView.superview.subviews.count; i ++) {
         UIView * view =_currentView.superview.subviews[i];
